@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aylimas Beach & Resort</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #e9f5ff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('beach_header.jpg') center/cover no-repeat;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+    }
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      margin-top: 1rem;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    h2 {
+      color: #e96e3f;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .services, .activities, .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 280px;
+      max-width: 360px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .gallery img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.4s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      background: #08304d;
+      color: white;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AYLIMAS BEACH & RESORT</h1>
+    <p>Holiday Is Different</p>
+  </header>
+
+  <section>
+    <h2>Welcome</h2>
+    <p style="text-align:center; max-width: 800px; margin: auto;">Aylimas Beach & Resort is a welcoming 3 star+ hotel located facing the sea within a verdant palm grove, contrasting with the simplicity and whiteness of its typical architecture. With 420 well-appointed rooms, the hotel is the perfect destination for both couples and families. Each room category such as Standard garden or sea view, quadruple and family superior rooms, features air conditioning or heating, internet WIFI, safe, telephone, satellite TV, and bathroom with bath or shower.</p>
+  </section>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Restaurants & Bars</h3>
+        <p>Central restaurant, 2 à la carte restaurants for elevated dining. Bars include: main lobby bar, pool bar, and beach bar with a wide selection of drinks and great service.</p>
+      </div>
+      <div class="card">
+        <h3>Entertainment</h3>
+        <p>1 outdoor pool with slides, 1 children’s pool, 1 indoor pool, and 2 sea water pools at the private beach.</p>
+      </div>
+      <div class="card">
+        <h3>Wellness</h3>
+        <p>Thalassotherapy center with a range of relaxing treatments, massages, sauna, hammam, and more to recharge your body and soul.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Activities</h2>
+    <div class="activities">
+      <div class="card">
+        <p>Tennis court, darts, aerobics, yoga, karaoke, nightclub, kids club, children’s play area, daytime and evening shows, entertainment programs, and a thalassotherapy center for relaxation and well-being.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="hotel_view.jpg" alt="Hotel View">
+      <img src="Capture d’écran 2025-07-03 141541.png" alt="Pool Area">
+      <img src="ChatGPT Image 3 juil. 2025, 14_21_10.png" alt="Beach Bar">
+    </div>
+  </section>
+
+  <footer>
+    <p>Located in Dkhila Skanes Airport Monastir - Tunisia</p>
+    <p>&copy; 2025 Aylimas Beach & Resort | Holiday Is Different</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.style.animation = 'fadeInUp 1s ease forwards';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
